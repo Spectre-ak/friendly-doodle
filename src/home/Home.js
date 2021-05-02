@@ -25,8 +25,10 @@ class Home extends React.Component {
 
     }
     componentDidMount() {
-
+      //  window.history.pushState('','','/home');
     }
+   
+    
     render() {
         return (
             <div className="container">
