@@ -3,6 +3,24 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import Sidebar from './sidebar/Sidebar';
 
+import $ from 'jquery';
+
+$.ajax({
+  url:"https://bug-free-octo-happiness.azurewebsites.net/testCookie",
+  type:"get",
+  data:new FormData(),
+  contentType:false,
+  processData:false,
+  success:function(response) {
+      console.log(response);
+      
+  },
+  error: function(XMLHttpRequest, textStatus, errorThrown) { 
+   console.log(textStatus,errorThrown);
+}
+});
+
+
 console.log(window.location.href);
 const ar={
   "home":"nav-link",
